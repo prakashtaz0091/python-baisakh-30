@@ -1,0 +1,6 @@
+prakash@prakash-Swift-SFG14-41:~/code it/python baisakh 30/tkinter$ python3 file_editor.py 
+
+prakash@prakash-Swift-SFG14-41:~/code it/python baisakh 30/tkinter$ python3 file_editor.py 
+prakash@prakash-Swift-SFG14-41:~/code it/python baisakh 30/tkinter$ new content another new contentalsdjflaksdf
+
+
