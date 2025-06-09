@@ -1,5 +1,5 @@
 import pygame
-from Game_objects.bullet import create_new_bullet
+from Game_objects.bullet import create_new_bullet, Bullet
 
 
 class Spaceship(pygame.sprite.Sprite):
@@ -15,6 +15,7 @@ class Spaceship(pygame.sprite.Sprite):
         self.rect.y = y
         self.height = self.rect.height
         self.width = self.rect.width
+        self.mask = pygame.mask.from_surface(self.image)
 
     def show(self, screen):
         screen.blit(self.image, (self.rect.x - self.width / 2, self.rect.y))
@@ -42,5 +43,10 @@ class Spaceship(pygame.sprite.Sprite):
         self.rect.y += Spaceship.speed
 
     def fire(self, bullet_img, fire_sound):
+        if Bullet.magaze <= 0:  # magaze empty
+            return
         fire_sound.play()
         create_new_bullet(bullet_img, self.rect.x, self.rect.y)
+
+    def destroy(self):
+        print("game over")
