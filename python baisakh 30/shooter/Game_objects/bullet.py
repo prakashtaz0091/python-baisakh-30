@@ -47,6 +47,10 @@ class Bullet(pygame.sprite.Sprite):
     def decrease_magaze(cls):
         cls.magaze -= 1
 
+    @classmethod
+    def refill_magaze(cls):
+        cls.magaze = 50
+
 
 def create_new_bullet(bullet_img, x, y):
     new_bullet = Bullet(bullet_img, x, y, scale=0.1)

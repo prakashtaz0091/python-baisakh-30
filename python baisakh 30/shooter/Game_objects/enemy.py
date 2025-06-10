@@ -18,7 +18,7 @@ class Enemy(pygame.sprite.Sprite):
         self.height = self.rect.height
         self.width = self.rect.width
         self.speed = random.randint(1, 4)
-        self.rect.center = (x, y)
+        # self.rect.center = (x, y)
         self.mask = pygame.mask.from_surface(self.image)
 
     def destroy(self):
